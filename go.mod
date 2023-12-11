@@ -1,4 +1,4 @@
-module github.com/jh125486/CSCE4600
+module github.com/Healthyfg/CSCE4600-1
 
 go 1.19
 
