@@ -74,6 +74,12 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 	// Check for built-in commands.
 	// New builtin commands should be added here. Eventually this should be refactored to its own func.
 	switch name {
+	case "touch":
+        return builtins.Touch(args...)
+	case "mkdir":
+        return builtins.Mkdir(args...)
+	case "echo":
+        return builtins.Echo(args...)
 	case "ls":
         return builtins.List(args...)
 	case "pwd":
@@ -101,3 +107,4 @@ func executeCommand(name string, arg ...string) error {
 	// Execute the command and return the error.
 	return cmd.Run()
 }
+
