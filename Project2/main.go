@@ -75,15 +75,15 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 	// New builtin commands should be added here. Eventually this should be refactored to its own func.
 	switch name {
 	case "touch":
-        return builtins.Touch(args...)
+        	return builtins.Touch(args...)
 	case "mkdir":
-        return builtins.Mkdir(args...)
+        	return builtins.Mkdir(args...)
 	case "echo":
-        return builtins.Echo(args...)
+        	return builtins.Echo(args...)
 	case "ls":
-        return builtins.List(args...)
+        	return builtins.List(args...)
 	case "pwd":
-        return builtins.PrintWorkingDirectory(args...)
+        	return builtins.PrintWorkingDirectory(args...)
 	case "cd":
 		return builtins.ChangeDirectory(args...)
 	case "env":
